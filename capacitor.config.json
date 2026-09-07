@@ -1,0 +1,6 @@
+{
+  "appId": "com.mohiuddinramzan.emojipuzzle",
+  "appName": "ইমুজি ধাঁধা",
+  "webDir": ".",
+  "bundledWebRuntime": false
+}
