@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>ইমুজি ধাঁধা</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">🧩</span>
+        <span class="brand-text">ইমুজি ধাঁধা</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="stat-num" id="scoreNum">0</span><span class="stat-label">স্কোর</span></div>
+        <div class="stat streak"><span class="stat-num" id="streakNum">0</span><span class="stat-label">ধারাবাহিক</span></div>
+      </div>
+    </header>
+
+    <!-- ডিফিকাল্টি বাছাই স্ক্রিন -->
+    <section id="pickScreen" class="screen pick-screen">
+      <p class="pick-eyebrow">মাথা খাটাও তো দেখি</p>
+      <h1 class="pick-title">লেভেল বাছো</h1>
+      <div class="level-cards">
+        <button class="level-card" data-level="easy">
+          <span class="level-emoji">🌱</span>
+          <span class="level-name">সহজ</span>
+          <span class="level-desc">দুইটা ইমুজি, শুধু যোগ</span>
+        </button>
+        <button class="level-card" data-level="medium">
+          <span class="level-emoji">🔥</span>
+          <span class="level-name">মাঝারি</span>
+          <span class="level-desc">যোগ-বিয়োগ মেশানো</span>
+        </button>
+        <button class="level-card" data-level="hard">
+          <span class="level-emoji">🧠</span>
+          <span class="level-name">কঠিন</span>
+          <span class="level-desc">তিনটা ইমুজি, গুণও থাকবে</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- পাজল স্ক্রিন -->
+    <section id="puzzleScreen" class="screen puzzle-screen hidden">
+      <div class="puzzle-topline">
+        <span class="level-chip" id="levelChip">সহজ</span>
+        <button class="change-level" id="changeLevelBtn">লেভেল বদলাও</button>
+      </div>
+
+      <div class="puzzle-card" id="clueBoard"></div>
+
+      <div class="final-row" id="finalRow"></div>
+
+      <div class="options-grid" id="optionsGrid"></div>
+
+      <div class="feedback" id="feedback"></div>
+
+      <button class="next-btn hidden" id="nextBtn">পরের ধাঁধা →</button>
+    </section>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
